@@ -1,0 +1,6 @@
+# Examen Práctico - .gitignore
+bin/
+obj/
+*.user
+*.suo
+*.log
