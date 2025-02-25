@@ -1,4 +1,5 @@
 # Examen Práctico - .gitignore
+.vs/
 bin/
 obj/
 *.user
