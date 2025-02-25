@@ -5,3 +5,8 @@ obj/
 *.user
 *.suo
 *.log
+bin/
+obj/
+*.user
+*.suo
+*.log
