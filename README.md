@@ -1,5 +1,28 @@
 # Examen Práctico - Backend y Frontend
 
+## Descripción del Proyecto
+
+El objetivo de esta solución es demostrar buenas prácticas en el desarrollo con ASP.NET Core, SQL Server y GitHub, abarcando desde la creación de la base de datos y la API hasta la construcción de un frontend MVC que consuma la API.
+
+Características Principales
+1. API REST:
+ Gestión de empleados (CRUD).
+Autenticación y autorización centralizadas con Identity.
+
+2. Aplicación MVC:
+
+Interfaz de usuario para la administración de empleados, con vistas para listar, crear, editar y eliminar.
+Consumo de la API mediante HttpClient.
+Diseño responsivo y moderno utilizando Bootstrap.
+
+3. Control de Versiones:
+
+Uso de Git y commits progresivos documentados en GitHub.
+
+4. Despliegue en IIS:
+
+Instrucciones detalladas para la publicación de ambos proyectos en IIS, ya sea como sitios independientes o como aplicaciones dentro de un mismo sitio.
+
 ## Configuracion e instalacion de IIS 
 
 En este apartado vamos a explicar como instalar y configurar IIS en windows para desplegar la aplicacion 
