@@ -40,7 +40,7 @@ namespace ExamenPractico.MVC.Controllers
             {
                 // Aquí se podría extraer un token y almacenar datos en la sesión o cookie.
                 // Por simplicidad, redirigimos al Home
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Empleado");
             }
             else
             {

@@ -1,0 +1,60 @@
+﻿@model List<ExamenPractico.MVC.Models.Empleado>
+@{
+    ViewData["Title"] = "Listado de Empleados";
+    int currentPage = ViewBag.CurrentPage;
+    int totalPages = ViewBag.TotalPages;
+    string search = ViewBag.Search as string;
+}
+
+<h2>Listado de Empleados</h2>
+
+<form method="get" asp-action="Index">
+    <div class="form-group">
+        <input type="text" name="search" value="@search" placeholder="Buscar..." class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Salario</th>
+            <th>Fecha Ingreso</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var empleado in Model)
+        {
+            <tr>
+                <td>@empleado.Nombre</td>
+                <td>@empleado.Apellido</td>
+                <td>@empleado.Email</td>
+                <td>@empleado.Telefono</td>
+                <td>@empleado.Salario.ToString("C")</td>
+                <td>@empleado.FechaIngreso.ToShortDateString()</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@empleado.Id" class="btn btn-sm btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@empleado.Id" class="btn btn-sm btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<nav aria-label="Page navigation">
+    <ul class="pagination">
+        @for (int i = 1; i <= totalPages; i++)
+        {
+            <li class="page-item @(i == currentPage ? "active" : "")">
+                <a class="page-link" href="@Url.Action("Index", new { page = i, search = search })">@i</a>
+            </li>
+        }
+    </ul>
+</nav>
+
+<a asp-action="Create" class="btn btn-success">Agregar Nuevo Empleado</a>
