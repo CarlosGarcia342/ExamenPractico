@@ -21,7 +21,7 @@ namespace ExamenPractico.API.Data
             // Configurar explícitamente el tipo decimal para Salario
             modelBuilder.Entity<Empleado>()
                 .Property(e => e.Salario)
-                .HasColumnType("decimal(18,2)");
+                .HasColumnType("decimal(10,2)");
         }
     }
 }
