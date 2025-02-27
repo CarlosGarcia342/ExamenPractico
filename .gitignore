@@ -1,4 +1,10 @@
 # Examen Práctico - .gitignore
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.log
 bin/
 obj/
 *.user
